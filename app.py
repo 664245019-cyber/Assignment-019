@@ -3,46 +3,59 @@ import streamlit as st
 # ตั้งค่าหน้าเว็บให้เป็นแบบ Wide และกำหนด Title
 st.set_page_config(
     page_title="Drink Recommendation Portal",
-    page_icon="💬",
+    page_icon="🧊",
     layout="wide",
 )
 
-# Custom CSS เพื่อตกแต่งสีและหน้าตาให้ใกล้เคียงภาพต้นฉบับ
+# Custom CSS ตกแต่งธีมสีฟ้าคลีนๆ (Clean Blue Theme)
 st.markdown(
     """
     <style>
+    /* ตั้งค่าพื้นหลังหลักของเว็บให้เป็นสีขาวสะอาดตา */
     .stApp {
-        background-color: #110f1c;
-        color: #ffffff;
+        background-color: #f8fafc;
+        color: #1e293b;
     }
+    
+    /* สไตล์ของการ์ด (Card) */
     .card {
-        background-color: #1e1a32;
-        border: 1px solid #2d274c;
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
         border-radius: 16px;
         padding: 24px;
         margin-bottom: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         transition: all 0.3s ease;
     }
+    
+    /* เอฟเฟกต์เมื่อเอาเมาส์ชี้การ์ด ขอบจะเปลี่ยนเป็นสีฟ้าสว่างขึ้น */
     .card:hover {
-        border-color: #a855f7;
+        border-color: #38bdf8;
+        box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.15);
+        transform: translateY(-2px);
     }
+    
+    /* หัวข้อในการ์ด */
     .card-title {
         font-size: 1.15rem;
         font-weight: 600;
         margin-bottom: 8px;
-        color: #ffffff;
+        color: #0f172a;
     }
+    
+    /* คำอธิบายในการ์ด */
     .card-desc {
         font-size: 0.9rem;
-        color: #9ca3af;
+        color: #64748b;
         margin-bottom: 24px;
         min-height: 40px;
     }
+    
+    /* ปุ่มกดลิงก์ (สีฟ้าพาสเทล/น้ำเงินเข้มคลีนๆ) */
     .custom-btn {
         display: block;
         width: 100%;
-        background-color: #6b21a8;
+        background-color: #0284c7;
         color: white;
         text-align: center;
         padding: 10px 0;
@@ -51,8 +64,9 @@ st.markdown(
         font-weight: 500;
         transition: background-color 0.2s;
     }
+    
     .custom-btn:hover {
-        background-color: #7e22ce;
+        background-color: #0369a1;
         color: white;
     }
     </style>
@@ -62,11 +76,11 @@ st.markdown(
 
 # หัวข้อหน้าเว็บ
 st.markdown(
-    "<h2 style='text-align: center; margin-bottom: 40px;'>💬 รวมงาน Recommendation</h2>",
+    "<h2 style='text-align: center; margin-bottom: 40px; color: #0f172a;'>🧊 รวมงาน Recommendation</h2>",
     unsafe_allow_html=True,
 )
 
-# ข้อมูลการ์ดต่างๆ (สามารถเปลี่ยนลิงก์ตรง url ได้เลย)
+# ข้อมูลการ์ดทั้ง 3 ช่อง
 cards = [
     {
         "icon": "⚔️",
@@ -78,7 +92,7 @@ cards = [
     {
         "icon": "📊",
         "title": "วิเคราะห์ความสัมพันธ์ Drink & User",
-        "desc": "kจัดการข้อมูล User และ Drink ด้วยฐานข้อมูลกราฟ Neo4j",
+        "desc": "จัดการข้อมูล User และ Drink ด้วยฐานข้อมูลกราฟ Neo4j",
         "url": "https://colab.research.google.com/drive/15EkYZchP1E09enM5Qk4kIBcA8SpzxOiA?usp=sharing",
         "btn_text": "เปิดระบบ ➔",
     },
@@ -86,12 +100,12 @@ cards = [
         "icon": "🎯",
         "title": "ระบบแนะนำ Drink",
         "desc": "แนะนำ Drink จากความสัมพันธ์และ Drink ที่เพื่อนเคยสั่ง",
-        "url": "ใส่ลิงก์ของคุณตรงนี้_3",
+        "url": "https://drink-graph-recommendation-019-pvrsrplg8hnmtfupwhp8ss.streamlit.app/",
         "btn_text": "เปิดระบบ ➔",
     },
 ]
 
-# แถวบน (3 คอลัมน์)
+# แสดงผลการ์ดแบบ 3 คอลัมน์
 cols = st.columns(3)
 for i, col in enumerate(cols):
     with col:
@@ -107,4 +121,3 @@ for i, col in enumerate(cols):
             """,
             unsafe_allow_html=True,
         )
-
