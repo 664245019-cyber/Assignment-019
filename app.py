@@ -84,7 +84,7 @@ st.markdown(
 cards = [
     {
         "icon": "⚔️",
-        "title": "โครงสร้างข้อมูล Drink & User",
+        "title": "Drink Recommender System ด้วย Graph",
         "desc": "วิเคราะห์ความสัมพันธ์ FRIEND_OF และประวัติการสั่ง Drink",
         "url": "https://colab.research.google.com/drive/1cFFUUkU0ceVjAmpGGb1tFRdwrc63MHnT?usp=sharing",
         "btn_text": "เปิดระบบ ➔",
