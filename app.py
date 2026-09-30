@@ -91,8 +91,8 @@ cards = [
     },
     {
         "icon": "📊",
-        "title": "วิเคราะห์ความสัมพันธ์ Drink & User",
-        "desc": "จัดการข้อมูล User และ Drink ด้วยฐานข้อมูลกราฟ Neo4j",
+        "title": "Drink Recommender System ด้วย Graph",
+        "desc": "Drink Recommender System ด้วยด้วยฐานข้อมูลกราฟ Neo4j",
         "url": "https://colab.research.google.com/drive/15EkYZchP1E09enM5Qk4kIBcA8SpzxOiA?usp=sharing",
         "btn_text": "เปิดระบบ ➔",
     },
