@@ -163,7 +163,7 @@ for i, col in enumerate(cols):
 st.markdown(
     """
     <div style='text-align: center; color: #94a3b8; font-size: 0.85rem; margin-top: 50px; margin-bottom: 20px;'>
-        Drink Recommendation Portal • Powered by Streamlit & Graph Technology
+        Drink Recommendation Portal • Powered by คณิศร จันทรสูตร 664245019
     </div>
     """,
     unsafe_allow_html=True,
