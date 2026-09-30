@@ -117,7 +117,7 @@ cards = [
         "icon": "⚔️",
         "badge": "Google Colab",
         "title": "Graph Analysis Model",
-        "desc": "วิเคราะห์ความสัมพันธ์ FRIEND_OF และประวัติการสั่งเครื่องดื่มเชิงลึกด้วย Graph Algorithms",
+        "desc": "วิเคราะห์ความสัมพันธ์ FRIEND_OF และประวัติการสั่งเครื่องดื่มเชิงลึกด้วย Graph ",
         "url": "https://colab.research.google.com/drive/1cFFUUkU0ceVjAmpGGb1tFRdwrc63MHnT?usp=sharing",
         "btn_text": "เปิดใช้งานบน Colab ➔",
     },
