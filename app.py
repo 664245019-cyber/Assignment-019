@@ -98,7 +98,7 @@ cards = [
     },
     {
         "icon": "🎯",
-        "title": "ระบบแนะนำ Drink",
+        "title": "Drink Recommender System บนเว็บ Streamlit ",
         "desc": "แนะนำ Drink จากความสัมพันธ์และ Drink ที่เพื่อนเคยสั่ง",
         "url": "https://drink-graph-recommendation-019-pvrsrplg8hnmtfupwhp8ss.streamlit.app/",
         "btn_text": "เปิดระบบ ➔",
