@@ -2,7 +2,7 @@ import streamlit as st
 
 # ตั้งค่าหน้าเว็บให้เป็นแบบ Wide และกำหนด Title
 st.set_page_config(
-    page_title="Anime Recommendation Portal",
+    page_title="Drink Recommendation Portal",
     page_icon="💬",
     layout="wide",
 )
@@ -62,7 +62,7 @@ st.markdown(
 
 # หัวข้อหน้าเว็บ
 st.markdown(
-    "<h2 style='text-align: center; margin-bottom: 40px;'>💬 รวมโปรเจกต์ระบบ Anime Recommendation ของเรา</h2>",
+    "<h2 style='text-align: center; margin-bottom: 40px;'>💬 รวมงาน Recommendation</h2>",
     unsafe_allow_html=True,
 )
 
@@ -70,22 +70,22 @@ st.markdown(
 cards = [
     {
         "icon": "⚔️",
-        "title": "โครงสร้างข้อมูล Anime & User",
-        "desc": "จัดการข้อมูล User และ Anime ด้วยฐานข้อมูลกราฟ Neo4j",
-        "url": "ใส่ลิงก์ของคุณตรงนี้_1",
+        "title": "โครงสร้างข้อมูล Drink & User",
+        "desc": "วิเคราะห์ความสัมพันธ์ FRIEND_OF และประวัติการสั่ง Drink",
+        "url": "https://colab.research.google.com/drive/1cFFUUkU0ceVjAmpGGb1tFRdwrc63MHnT?usp=sharing",
         "btn_text": "เปิดระบบ ➔",
     },
     {
         "icon": "📊",
-        "title": "วิเคราะห์ความสัมพันธ์ User",
-        "desc": "วิเคราะห์ความสัมพันธ์ FRIEND_OF และประวัติการดู Anime",
-        "url": "ใส่ลิงก์ของคุณตรงนี้_2",
+        "title": "วิเคราะห์ความสัมพันธ์ Drink & User",
+        "desc": "kจัดการข้อมูล User และ Drink ด้วยฐานข้อมูลกราฟ Neo4j",
+        "url": "https://colab.research.google.com/drive/15EkYZchP1E09enM5Qk4kIBcA8SpzxOiA?usp=sharing",
         "btn_text": "เปิดระบบ ➔",
     },
     {
         "icon": "🎯",
-        "title": "ระบบแนะนำ Anime",
-        "desc": "แนะนำ Anime จากความสัมพันธ์และ Anime ที่เพื่อนเคยดู",
+        "title": "ระบบแนะนำ Drink",
+        "desc": "แนะนำ Drink จากความสัมพันธ์และ Drink ที่เพื่อนเคยสั่ง",
         "url": "ใส่ลิงก์ของคุณตรงนี้_3",
         "btn_text": "เปิดระบบ ➔",
     },
@@ -108,17 +108,3 @@ for i, col in enumerate(cols):
             unsafe_allow_html=True,
         )
 
-# แถวล่าง (การ์ด Neo4j Database แบบในภาพ)
-col_bottom1, col_bottom2, col_bottom3 = st.columns(3)
-with col_bottom1:
-    st.markdown(
-        """
-        <div class="card">
-            <div style="font-size: 1.5rem; margin-bottom: 12px;">🗄️</div>
-            <div class="card-title">Neo4j Database</div>
-            <div class="card-desc">ฐานข้อมูลกราฟที่จัดเก็บ User, Anime และความสัมพันธ์</div>
-            <a href="ใส่ลิงก์ของคุณตรงนี้_4" target="_blank" class="custom-btn">เปิดเว็บไซต์ ➔</a>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
