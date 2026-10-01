@@ -231,7 +231,7 @@ with cols[3]:
 # Footer เล็กๆ ด้านล่าง
 st.markdown(
     """
-    <div style='text-align: center; color: #94a3b8; font-size: 0.85rem; margin-top: 40px; margin-bottom: 20px;'>
+    <div style='text-align: center; color: #94a3b8; font-size: 1rem; margin-top: 40px; margin-bottom: 20px;'>
         Drink Recommendation Portal • Powered by 664245019 คณิศร จันทรสูตร
     </div>
     """,
