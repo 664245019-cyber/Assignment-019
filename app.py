@@ -190,7 +190,7 @@ with cols[3]:
         st.download_button(
             label="📄 ดาวน์โหลด PDF ➔",
             data=pdf_bytes,
-            file_name="Drink_Recommendation_Report.pdf",
+            file_name="664245019_club.pdf",
             mime="application/pdf",
             use_container_width=True
         )
