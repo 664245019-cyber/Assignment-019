@@ -216,8 +216,8 @@ with cols[3]:
             <div>
                 <div style="font-size: 2rem; margin-bottom: 12px;">📥</div>
                 <div class="card-badge">Documentation</div>
-                <div class="card-title">Neo4j_งานของผู้เรียน_ระบบชมรม</div>
-                <div class="card-desc">Neo4j_งานของผู้เรียน_ระบบชมรม PDF</div>
+                <div class="card-title">ระบบชมรมด้วย Neo4j/div>
+                <div class="card-desc">งานระบบชมรม: นักศึกษา ชมรม ความสัมพันธ์ และคำสั่ง Cypher พร้อมเอกสาร PDF</div>
             </div>
             <div>
                 <a href="{pdf_html_link}" download="664245019_club.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
