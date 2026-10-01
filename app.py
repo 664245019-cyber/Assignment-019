@@ -196,7 +196,7 @@ with cols[2]:
             <div>
                 <div style="font-size: 2rem; margin-bottom: 12px;">🎯</div>
                 <div class="card-badge">Web Application</div>
-                <div class="card-title">Streamlit Web Portal</div>
+                <div class="card-title">ระบบแนะนำเครื่องดื่ม</div>
                 <div class="card-desc">ใช้งานระบบแนะนำเครื่องดื่มผ่านหน้าเว็บอินเทอร์เฟซสำเร็จรูป สะดวกและรวดเร็ว</div>
             </div>
             <div>
