@@ -70,7 +70,7 @@ st.markdown(
         flex-grow: 1;
     }
     
-    /* ปุ่มกดลิงก์แบบ Gradient สวยงาม (สำหรับลิงก์ปกติ) */
+    /* ปุ่มกดหลักแบบ Gradient */
     .custom-btn {
         display: block;
         width: 100%;
@@ -81,14 +81,38 @@ st.markdown(
         border-radius: 12px;
         text-decoration: none;
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
         transition: all 0.2s ease;
+        margin-bottom: 8px;
     }
     
     .custom-btn:hover {
         background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
         box-shadow: 0 6px 15px rgba(2, 132, 199, 0.35);
+        transform: translateY(-1px);
+        color: white !important;
+    }
+
+    /* ปุ่มกด GitHub รอง */
+    .github-btn {
+        display: block;
+        width: 100%;
+        background-color: #f1f5f9;
+        color: #334155 !important;
+        text-align: center;
+        padding: 9px 0;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85rem;
+        border: 1px solid #e2e8f0;
+        transition: all 0.2s ease;
+    }
+
+    .github-btn:hover {
+        background-color: #e2e8f0;
+        color: #0f172a !important;
         transform: translateY(-1px);
     }
     </style>
@@ -125,7 +149,10 @@ with cols[0]:
                 <div class="card-title">Graph Analysis Model</div>
                 <div class="card-desc">วิเคราะห์ความสัมพันธ์ FRIEND_OF และประวัติการสั่งเครื่องดื่มเชิงลึกด้วย Graph Algorithms</div>
             </div>
-            <a href="https://colab.research.google.com/drive/1cFFUUkU0ceVjAmpGGb1tFRdwrc63MHnT?usp=sharing" target="_blank" class="custom-btn">เปิดใช้งาน ➔</a>
+            <div>
+                <a href="https://colab.research.google.com/drive/1cFFUUkU0ceVjAmpGGb1tFRdwrc63MHnT?usp=sharing" target="_blank" class="custom-btn">เปิดใช้งาน ➔</a>
+                <a href="https://github.com/YOUR_GITHUB_LINK_1" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -142,7 +169,10 @@ with cols[1]:
                 <div class="card-title">Neo4j Recommender</div>
                 <div class="card-desc">ระบบแนะนำเครื่องดื่มที่มีประสิทธิภาพสูงด้วยโครงสร้างฐานข้อมูลแบบกราฟ Neo4j</div>
             </div>
-            <a href="https://colab.research.google.com/drive/15EkYZchP1E09enM5Qk4kIBcA8SpzxOiA?usp=sharing" target="_blank" class="custom-btn">เปิดใช้งาน ➔</a>
+            <div>
+                <a href="https://colab.research.google.com/drive/15EkYZchP1E09enM5Qk4kIBcA8SpzxOiA?usp=sharing" target="_blank" class="custom-btn">เปิดใช้งาน ➔</a>
+                <a href="https://github.com/YOUR_GITHUB_LINK_2" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -159,7 +189,10 @@ with cols[2]:
                 <div class="card-title">Streamlit Web Portal</div>
                 <div class="card-desc">ใช้งานระบบแนะนำเครื่องดื่มผ่านหน้าเว็บอินเทอร์เฟซสำเร็จรูป สะดวกและรวดเร็ว</div>
             </div>
-            <a href="https://drink-graph-recommendation-019-pvrsrplg8hnmtfupwhp8ss.streamlit.app/" target="_blank" class="custom-btn">เข้าสู่เว็บไซต์ ➔</a>
+            <div>
+                <a href="https://drink-graph-recommendation-019-pvrsrplg8hnmtfupwhp8ss.streamlit.app/" target="_blank" class="custom-btn">เข้าสู่เว็บไซต์ ➔</a>
+                <a href="https://github.com/YOUR_GITHUB_LINK_3" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -180,31 +213,35 @@ with cols[3]:
         unsafe_allow_html=True,
     )
     
-    # --- วิธีใส่ไฟล์ PDF ของคุณ ---
-    # 1. นำไฟล์ PDF มาวางไว้โฟลเดอร์เดียวกับโปรเจกต์ (เช่น ตั้งชื่อว่า report.pdf)
-    # 2. เปิดไฟล์เพื่อส่งให้ปุ่มดาวน์โหลด ดังนี้:
+    # ปุ่มดาวน์โหลด PDF
     try:
         with open("664245019_club.pdf", "rb") as pdf_file:
             pdf_bytes = pdf_file.read()
             
         st.download_button(
-            label="📄 ดาวน์โหลด PDF ➔",
+            label="📄 ดาวน์โหลด PDF",
             data=pdf_bytes,
             file_name="664245019_club.pdf",
             mime="application/pdf",
             use_container_width=True
         )
     except FileNotFoundError:
-        # หากยังไม่ได้เอาไฟล์ report.pdf มาวาง จะแสดงปุ่มแจ้งเตือนแทน
-        st.warning("⚠️️ ยังไม่พบไฟล์ report.pdf ในโฟลเดอร์")
+        st.warning("⚠ ไม่พบไฟล์ PDF")
 
-    st.markdown("</div>", unsafe_allow_html=True)
+    # ลิงก์ GitHub สำหรับช่องที่ 4
+    st.markdown(
+        """
+            <a href="https://github.com/YOUR_GITHUB_LINK_4" target="_blank" class="github-btn" style="margin-top: 8px;">🐱 ดูโค้ดบน GitHub</a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # Footer เล็กๆ ด้านล่าง
 st.markdown(
     """
     <div style='text-align: center; color: #94a3b8; font-size: 0.85rem; margin-top: 40px; margin-bottom: 20px;'>
-        Drink Recommendation Portal • Powered by Streamlit & Graph Technology
+        Drink Recommendation Portal • Powered by นายคณิศร จันทรสูตร 664245019
     </div>
     """,
     unsafe_allow_html=True,
