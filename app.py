@@ -173,8 +173,8 @@ with cols[3]:
             <div>
                 <div style="font-size: 2rem; margin-bottom: 12px;">📥</div>
                 <div class="card-badge">Documentation</div>
-                <div class="card-title">ดาวน์โหลดคู่มือ / รายงาน</div>
-                <div class="card-desc">ดาวน์โหลดเอกสารรายงานโครงงาน หรือคู่มือการใช้งานระบบในรูปแบบไฟล์ PDF</div>
+                <div class="card-title">Neo4j_งานของผู้เรียน_ระบบชมรม</div>
+                <div class="card-desc">Neo4j_งานของผู้เรียน_ระบบชมรม PDF</div>
             </div>
         """,
         unsafe_allow_html=True,
