@@ -216,7 +216,7 @@ with cols[3]:
             <div>
                 <div style="font-size: 2rem; margin-bottom: 12px;">📥</div>
                 <div class="card-badge">Documentation</div>
-                <div class="card-title">ระบบชมรมด้วย Neo4j/div>
+                <div class="card-title">ระบบชมรมด้วย Neo4j</div>
                 <div class="card-desc">งานระบบชมรม: นักศึกษา ชมรม ความสัมพันธ์ และคำสั่ง Cypher พร้อมเอกสาร PDF</div>
             </div>
             <div>
