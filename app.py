@@ -184,7 +184,7 @@ with cols[3]:
     # 1. นำไฟล์ PDF มาวางไว้โฟลเดอร์เดียวกับโปรเจกต์ (เช่น ตั้งชื่อว่า report.pdf)
     # 2. เปิดไฟล์เพื่อส่งให้ปุ่มดาวน์โหลด ดังนี้:
     try:
-        with open("report.pdf", "rb") as pdf_file:
+        with open("664245019_club.pdf", "rb") as pdf_file:
             pdf_bytes = pdf_file.read()
             
         st.download_button(
