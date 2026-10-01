@@ -7,7 +7,7 @@ st.set_page_config(
     layout="wide",
 )
 
-# Custom CSS ตกแต่งดีไซน์ให้พรีเมียมและสะอาดตา
+# Custom CSS ตกแต่งดีไซน์ให้พรีเมียมและสะอาดตา (รวมถึงแปลงโฉมปุ่ม Streamlit ให้เข้าพวก)
 st.markdown(
     """
     <style>
@@ -94,6 +94,28 @@ st.markdown(
         color: white !important;
     }
 
+    /* แปลงโฉมปุ่ม st.download_button (Streamlit native button) ให้เหมือน .custom-btn เป๊ะๆ */
+    div.stDownloadButton > button {
+        width: 100% !important;
+        background: linear-gradient(135deg, #0284c7 0%, #0369a1 100% ) !important;
+        color: white !important;
+        border-radius: 12px !important;
+        font-weight: 600 !important;
+        font-size: 0.85rem !important;
+        border: none !important;
+        padding: 10px 0 !important;
+        box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25) !important;
+        transition: all 0.2s ease !important;
+        margin-bottom: 8px !important;
+    }
+
+    div.stDownloadButton > button:hover {
+        background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+        box-shadow: 0 6px 15px rgba(2, 132, 199, 0.35) !important;
+        transform: translateY(-1px) !important;
+        color: white !important;
+    }
+
     /* ปุ่มกด GitHub รอง */
     .github-btn {
         display: block;
@@ -151,7 +173,7 @@ with cols[0]:
             </div>
             <div>
                 <a href="https://colab.research.google.com/drive/1cFFUUkU0ceVjAmpGGb1tFRdwrc63MHnT?usp=sharing" target="_blank" class="custom-btn">เปิดใช้งาน ➔</a>
-                <a href="https://github.com/YOUR_GITHUB_LINK_1" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/664245019_Drink_reccomend.ipynb" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
             </div>
         </div>
         """,
@@ -171,7 +193,7 @@ with cols[1]:
             </div>
             <div>
                 <a href="https://colab.research.google.com/drive/15EkYZchP1E09enM5Qk4kIBcA8SpzxOiA?usp=sharing" target="_blank" class="custom-btn">เปิดใช้งาน ➔</a>
-                <a href="https://github.com/YOUR_GITHUB_LINK_2" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/664245019_Drink_reccomend_neo4j.ipynb" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
             </div>
         </div>
         """,
@@ -191,14 +213,14 @@ with cols[2]:
             </div>
             <div>
                 <a href="https://drink-graph-recommendation-019-pvrsrplg8hnmtfupwhp8ss.streamlit.app/" target="_blank" class="custom-btn">เข้าสู่เว็บไซต์ ➔</a>
-                <a href="https://github.com/YOUR_GITHUB_LINK_3" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+                <a href="https://github.com/664245019-cyber/Drink-Graph-Recommendation-019" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
             </div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-# การ์ดที่ 4: สำหรับดาวน์โหลดไฟล์ PDF
+# การ์ดที่ 4: สำหรับดาวน์โหลดไฟล์ PDF (จัดหน้าให้เข้าพวกกัน)
 with cols[3]:
     st.markdown(
         """
@@ -213,7 +235,7 @@ with cols[3]:
         unsafe_allow_html=True,
     )
     
-    # ปุ่มดาวน์โหลด PDF
+    # ปุ่มดาวน์โหลด PDF ที่ถูกจัดสไตล์ CSS ให้เหมือนการ์ดช่องอื่นแล้ว
     try:
         with open("664245019_club.pdf", "rb") as pdf_file:
             pdf_bytes = pdf_file.read()
@@ -231,7 +253,7 @@ with cols[3]:
     # ลิงก์ GitHub สำหรับช่องที่ 4
     st.markdown(
         """
-            <a href="https://github.com/YOUR_GITHUB_LINK_4" target="_blank" class="github-btn" style="margin-top: 8px;">🐱 ดูโค้ดบน GitHub</a>
+            <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/664245019_club.pd" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
         </div>
         """,
         unsafe_allow_html=True,
@@ -241,7 +263,7 @@ with cols[3]:
 st.markdown(
     """
     <div style='text-align: center; color: #94a3b8; font-size: 0.85rem; margin-top: 40px; margin-bottom: 20px;'>
-        Drink Recommendation Portal • Powered by นายคณิศร จันทรสูตร 664245019
+        Drink Recommendation Portal • Powered by Streamlit & Graph Technology
     </div>
     """,
     unsafe_allow_html=True,
