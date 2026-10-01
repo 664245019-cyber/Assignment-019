@@ -1,4 +1,5 @@
 import streamlit as st
+import base64
 
 # ตั้งค่าหน้าเว็บให้เป็นแบบ Wide และกำหนด Title
 st.set_page_config(
@@ -7,7 +8,7 @@ st.set_page_config(
     layout="wide",
 )
 
-# Custom CSS ตกแต่งดีไซน์ให้พรีเมียมและสะอาดตา (รวมถึงแปลงโฉมปุ่ม Streamlit ให้เข้าพวก)
+# Custom CSS ตกแต่งดีไซน์ให้พรีเมียมและสะอาดตา
 st.markdown(
     """
     <style>
@@ -94,28 +95,6 @@ st.markdown(
         color: white !important;
     }
 
-    /* แปลงโฉมปุ่ม st.download_button (Streamlit native button) ให้เหมือน .custom-btn เป๊ะๆ */
-    div.stDownloadButton > button {
-        width: 100% !important;
-        background: linear-gradient(135deg, #0284c7 0%, #0369a1 100% ) !important;
-        color: white !important;
-        border-radius: 12px !important;
-        font-weight: 600 !important;
-        font-size: 0.85rem !important;
-        border: none !important;
-        padding: 10px 0 !important;
-        box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25) !important;
-        transition: all 0.2s ease !important;
-        margin-bottom: 8px !important;
-    }
-
-    div.stDownloadButton > button:hover {
-        background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
-        box-shadow: 0 6px 15px rgba(2, 132, 199, 0.35) !important;
-        transform: translateY(-1px) !important;
-        color: white !important;
-    }
-
     /* ปุ่มกด GitHub รอง */
     .github-btn {
         display: block;
@@ -156,6 +135,15 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+# แปลงไฟล์ PDF เป็น Base64 สำหรับทำลิงก์ดาวน์โหลดแบบเนียนๆ
+pdf_html_link = "#"
+try:
+    with open("664245019_club.pdf", "rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        pdf_html_link = f"data:application/pdf;base64,{base64_pdf}"
+except FileNotFoundError:
+    pass
 
 # สร้าง Layout 4 คอลัมน์
 cols = st.columns(4)
@@ -220,10 +208,10 @@ with cols[2]:
         unsafe_allow_html=True,
     )
 
-# การ์ดที่ 4: สำหรับดาวน์โหลดไฟล์ PDF (จัดหน้าให้เข้าพวกกัน)
+# การ์ดที่ 4: สำหรับดาวน์โหลดไฟล์ PDF (ใช้ HTML ล้วน จัดอยู่ในกรอบสวยงามเท่ากันเป๊ะ)
 with cols[3]:
     st.markdown(
-        """
+        f"""
         <div class="card">
             <div>
                 <div style="font-size: 2rem; margin-bottom: 12px;">📥</div>
@@ -231,29 +219,10 @@ with cols[3]:
                 <div class="card-title">Neo4j_งานของผู้เรียน_ระบบชมรม</div>
                 <div class="card-desc">Neo4j_งานของผู้เรียน_ระบบชมรม PDF</div>
             </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    
-    # ปุ่มดาวน์โหลด PDF ที่ถูกจัดสไตล์ CSS ให้เหมือนการ์ดช่องอื่นแล้ว
-    try:
-        with open("664245019_club.pdf", "rb") as pdf_file:
-            pdf_bytes = pdf_file.read()
-            
-        st.download_button(
-            label="📄 ดาวน์โหลด PDF",
-            data=pdf_bytes,
-            file_name="664245019_club.pdf",
-            mime="application/pdf",
-            use_container_width=True
-        )
-    except FileNotFoundError:
-        st.warning("⚠ ไม่พบไฟล์ PDF")
-
-    # ลิงก์ GitHub สำหรับช่องที่ 4
-    st.markdown(
-        """
-            <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/664245019_club.pd" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+            <div>
+                <a href="{pdf_html_link}" download="664245019_club.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
+                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/664245019_club.pdf" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
