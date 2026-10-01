@@ -129,7 +129,7 @@ st.markdown(
             🧊 Drink Recommendation Portal
         </h1>
         <p style='color: #64748b; font-size: 1.05rem;'>
-            ศูนย์รวมระบบแนะนำเครื่องดื่มอัจฉริยะด้วยเทคโนโลยี Graph Database และเอกสารคู่มือการใช้งาน
+            รวมงานทั้งหมด
         </p>
     </div>
     """,
