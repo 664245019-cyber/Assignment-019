@@ -126,7 +126,7 @@ st.markdown(
     """
     <div style='text-align: center; margin-top: 20px; margin-bottom: 30px;'>
         <h1 style='font-weight: 800; color: #0f172a; font-size: 2.3rem; margin-bottom: 10px;'>
-            🧊 Drink Recommendation Portal
+            🧊 รวมงานระบบแนะนำ และ การบ้านทั้งหมด
         </h1>
         <p style='color: #64748b; font-size: 1.05rem;'>
             รวมงานทั้งหมด
