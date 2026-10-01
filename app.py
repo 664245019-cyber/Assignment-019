@@ -232,7 +232,7 @@ with cols[3]:
 st.markdown(
     """
     <div style='text-align: center; color: #94a3b8; font-size: 0.85rem; margin-top: 40px; margin-bottom: 20px;'>
-        Drink Recommendation Portal • Powered by Streamlit & Graph Technology
+        Drink Recommendation Portal • Powered by 664245019 คณิศร จันทรสูตร
     </div>
     """,
     unsafe_allow_html=True,
