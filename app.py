@@ -156,7 +156,7 @@ with cols[0]:
             <div>
                 <div style="font-size: 2rem; margin-bottom: 12px;">⚔️</div>
                 <div class="card-badge">Google Colab</div>
-                <div class="card-title">Graph Analysis Model</div>
+                <div class="card-title">แนะนำเครื่องดื่มด้วย Graph Analysis Model</div>
                 <div class="card-desc">วิเคราะห์ความสัมพันธ์ FRIEND_OF และประวัติการสั่งเครื่องดื่มเชิงลึกด้วย Graph Algorithms</div>
             </div>
             <div>
@@ -176,7 +176,7 @@ with cols[1]:
             <div>
                 <div style="font-size: 2rem; margin-bottom: 12px;">📊</div>
                 <div class="card-badge">Neo4j Database</div>
-                <div class="card-title">Neo4j Recommender</div>
+                <div class="card-title">แนะนำเครื่องดื่มด้วย Neo4j </div>
                 <div class="card-desc">ระบบแนะนำเครื่องดื่มที่มีประสิทธิภาพสูงด้วยโครงสร้างฐานข้อมูลแบบกราฟ Neo4j</div>
             </div>
             <div>
