@@ -228,6 +228,25 @@ with cols[3]:
         unsafe_allow_html=True,
     )
 
+with cols[4]:
+    st.markdown(
+        f"""
+        <div class="card">
+            <div>
+                <div style="font-size: 2rem; margin-bottom: 12px;">📥</div>
+                <div class="card-badge">Documentation</div>
+                <div class="card-title">Book Recommend System</div>
+                <div class="card-desc">งานตอบคำถามระบบแนะนำหนังสือ: นักศึกษา ความสัมพันธ์ และคำสั่ง Cypher พร้อมเอกสาร PDF</div>
+            </div>
+            <div>
+                <a href="{pdf_html_link}" download="ตอบคำถามBook Recommend.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
+                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/ตอบคำถามBook Recommend.pdf" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
 # Footer เล็กๆ ด้านล่าง
 st.markdown(
     """
