@@ -156,7 +156,7 @@ with cols[0]:
             <div>
                 <div style="font-size: 2rem; margin-bottom: 12px;">⚔️</div>
                 <div class="card-badge">Google Colab</div>
-                <div class="card-title">แนะนำเครื่องดื่มด้วย Graph Analysis Model</div>
+                <div class="card-title">แนะนำเครื่องดื่มด้วย Graph Analysis</div>
                 <div class="card-desc">วิเคราะห์ความสัมพันธ์ FRIEND_OF และประวัติการสั่งเครื่องดื่มเชิงลึกด้วย Graph Algorithms</div>
             </div>
             <div>
