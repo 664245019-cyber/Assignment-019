@@ -1,4 +1,4 @@
-
+```python
 import streamlit as st
 import base64
 
@@ -129,6 +129,7 @@ st.markdown(
         <h1 style='font-weight: 800; color: #0f172a; font-size: 2.3rem; margin-bottom: 10px;'>
             🧊 รวมงานระบบแนะนำ และ การบ้านทั้งหมด
         </h1>
+
         <p style='color: #64748b; font-size: 1.05rem;'>
             เลือกงานที่ต้องการเปิดดูได้จากการ์ดด้านล่าง
         </p>
@@ -183,9 +184,13 @@ with cols[0]:
         """
         <div class="card">
             <div>
-                <div style="font-size: 2rem; margin-bottom: 12px;">⚔️</div>
+                <div style="font-size: 2rem; margin-bottom: 12px;">
+                    ⚔️
+                </div>
 
-                <div class="card-badge">Google Colab</div>
+                <div class="card-badge">
+                    Google Colab
+                </div>
 
                 <div class="card-title">
                     แนะนำเครื่องดื่มด้วย Graph Analysis
@@ -224,9 +229,13 @@ with cols[1]:
         """
         <div class="card">
             <div>
-                <div style="font-size: 2rem; margin-bottom: 12px;">📊</div>
+                <div style="font-size: 2rem; margin-bottom: 12px;">
+                    📊
+                </div>
 
-                <div class="card-badge">Neo4j Database</div>
+                <div class="card-badge">
+                    Neo4j Database
+                </div>
 
                 <div class="card-title">
                     แนะนำเครื่องดื่มด้วย Neo4j
@@ -265,9 +274,13 @@ with cols[2]:
         f"""
         <div class="card">
             <div>
-                <div style="font-size: 2rem; margin-bottom: 12px;">🎯</div>
+                <div style="font-size: 2rem; margin-bottom: 12px;">
+                    🎯
+                </div>
 
-                <div class="card-badge">Web Application</div>
+                <div class="card-badge">
+                    Web Application
+                </div>
 
                 <div class="card-title">
                     ระบบแนะนำเครื่องดื่ม
@@ -312,9 +325,13 @@ with cols[3]:
         f"""
         <div class="card">
             <div>
-                <div style="font-size: 2rem; margin-bottom: 12px;">📥</div>
+                <div style="font-size: 2rem; margin-bottom: 12px;">
+                    📥
+                </div>
 
-                <div class="card-badge">Documentation</div>
+                <div class="card-badge">
+                    Documentation
+                </div>
 
                 <div class="card-title">
                     ระบบชมรมด้วย Neo4j
@@ -353,9 +370,13 @@ with cols[4]:
         f"""
         <div class="card">
             <div>
-                <div style="font-size: 2rem; margin-bottom: 12px;">📚</div>
+                <div style="font-size: 2rem; margin-bottom: 12px;">
+                    📚
+                </div>
 
-                <div class="card-badge">Documentation</div>
+                <div class="card-badge">
+                    Documentation
+                </div>
 
                 <div class="card-title">
                     Book Recommend System
@@ -373,7 +394,7 @@ with cols[4]:
                     📄 ดาวน์โหลด PDF
                 </a>
 
-                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/ตอบคำถามBook Recommend.pdf"
+                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/ตอบคำถามBook%20Recommend.pdf"
                    target="_blank"
                    class="github-btn">
                     🐱 ดูงานบน GitHub
@@ -390,11 +411,29 @@ with cols[4]:
 # =========================
 st.markdown(
     """
-    <div style='text-align: center; color: #94a3b8; font-size: 1rem;
-                margin-top: 40px; margin-bottom: 20px;'>
+    <div style='text-align: center;
+                color: #94a3b8;
+                font-size: 1rem;
+                margin-top: 40px;
+                margin-bottom: 20px;'>
+
         All Assignment Portal • 664245019 คณิศร จันทรสูตร
+
     </div>
     """,
     unsafe_allow_html=True,
 )
+```
 
+เอาโค้ดนี้แทน `app.py` ทั้งหมดได้เลยครับ
+
+**และอย่าลืม:** ใน GitHub ต้องมี PDF 3 ไฟล์นี้อยู่ระดับเดียวกับ `app.py`:
+
+```text
+app.py
+Drink_Recommendation_Presentation_019.pdf
+664245019_club.pdf
+ตอบคำถามBook Recommend.pdf
+```
+
+ส่วน `cols[4]` ในเวอร์ชันนี้ **ถูกต้องแล้ว** เพราะมี `st.columns(5)` ครับ.
