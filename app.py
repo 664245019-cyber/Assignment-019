@@ -424,16 +424,3 @@ st.markdown(
     unsafe_allow_html=True,
 )
 ```
-
-เอาโค้ดนี้แทน `app.py` ทั้งหมดได้เลยครับ
-
-**และอย่าลืม:** ใน GitHub ต้องมี PDF 3 ไฟล์นี้อยู่ระดับเดียวกับ `app.py`:
-
-```text
-app.py
-Drink_Recommendation_Presentation_019.pdf
-664245019_club.pdf
-ตอบคำถามBook Recommend.pdf
-```
-
-ส่วน `cols[4]` ในเวอร์ชันนี้ **ถูกต้องแล้ว** เพราะมี `st.columns(5)` ครับ.
