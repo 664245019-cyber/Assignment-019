@@ -221,7 +221,7 @@ with cols[3]:
             </div>
             <div>
                 <a href="{pdf_html_link}" download="664245019_club.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
-                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/664245019_club.pdf" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/664245019_club.pdf" target="_blank" class="github-btn">🐱 ดูงานบน GitHub</a>
             </div>
         </div>
         """,
@@ -240,7 +240,7 @@ with cols[4]:
             </div>
             <div>
                 <a href="{pdf_html_link}" download="ตอบคำถามBook Recommend.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
-                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/ตอบคำถามBook Recommend.pdf" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
+                <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/ตอบคำถามBook Recommend.pdf" target="_blank" class="github-btn">🐱 ดูงานบน GitHub</a>
             </div>
         </div>
         """,
