@@ -146,7 +146,7 @@ except FileNotFoundError:
     pass
 
 # สร้าง Layout 4 คอลัมน์
-cols = st.columns(4)
+cols = st.columns(5)
 
 # การ์ดที่ 1: Graph Analysis Model
 with cols[0]:
