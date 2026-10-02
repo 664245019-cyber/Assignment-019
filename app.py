@@ -1,5 +1,5 @@
-import streamlit as st
 import base64
+import streamlit as st
 
 # ตั้งค่าหน้าเว็บให้เป็นแบบ Wide และกำหนด Title
 st.set_page_config(
@@ -117,7 +117,7 @@ st.markdown(
         transform: translateY(-1px);
     }
     </style>
-""",
+    """,
     unsafe_allow_html=True,
 )
 
@@ -136,16 +136,20 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# แปลงไฟล์ PDF เป็น Base64 สำหรับทำลิงก์ดาวน์โหลดแบบเนียนๆ
-pdf_html_link = "#"
-try:
-    with open("664245019_club.pdf", "rb") as f:
-        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        pdf_html_link = f"data:application/pdf;base64,{base64_pdf}"
-except FileNotFoundError:
-    pass
+# ฟังก์ชันแปลงไฟล์เป็น Base64 แบบปลอดภัย
+def get_pdf_link(filename):
+    try:
+        with open(filename, "rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode("utf-8")
+            return f"data:application/pdf;base64,{base64_pdf}"
+    except FileNotFoundError:
+        return "#"
 
-# สร้าง Layout 4 คอลัมน์
+pdf_club_link = get_pdf_link("664245019_club.pdf")
+pdf_drink_link = get_pdf_link("664245019_club.pdf") # เปลี่ยนเป็นชื่อไฟล์เดบิวต์ของคุณถ้ามี
+pdf_book_link = get_pdf_link("ตอบคำถามBook Recommend.pdf")
+
+# สร้าง Layout 5 คอลัมน์
 cols = st.columns(5)
 
 # การ์ดที่ 1: Graph Analysis Model
@@ -201,7 +205,7 @@ with cols[2]:
             </div>
             <div>
                 <a href="https://drink-graph-recommendation-019-pvrsrplg8hnmtfupwhp8ss.streamlit.app/" target="_blank" class="custom-btn">เข้าสู่เว็บไซต์ ➔</a>
-                <a href="{pdf_html_link}" download="Drink_Recommendation_Presentation_019.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
+                <a href="{pdf_club_link}" download="Drink_Recommendation_Presentation_019.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
                 <a href="https://github.com/664245019-cyber/Drink-Graph-Recommendation-019" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
             </div>
         </div>
@@ -209,7 +213,7 @@ with cols[2]:
         unsafe_allow_html=True,
     )
 
-# การ์ดที่ 4: สำหรับดาวน์โหลดไฟล์ PDF (ใช้ HTML ล้วน จัดอยู่ในกรอบสวยงามเท่ากันเป๊ะ)
+# การ์ดที่ 4: ระบบชมรมด้วย Neo4j
 with cols[3]:
     st.markdown(
         f"""
@@ -221,7 +225,7 @@ with cols[3]:
                 <div class="card-desc">งานระบบชมรม: นักศึกษา ชมรม ความสัมพันธ์ และคำสั่ง Cypher พร้อมเอกสาร PDF</div>
             </div>
             <div>
-                <a href="{pdf_html_link}" download="664245019_club.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
+                <a href="{pdf_club_link}" download="664245019_club.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
                 <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/664245019_club.pdf" target="_blank" class="github-btn">🐱 ดูงานบน GitHub</a>
             </div>
         </div>
@@ -229,6 +233,7 @@ with cols[3]:
         unsafe_allow_html=True,
     )
 
+# การ์ดที่ 5: Book Recommend System
 with cols[4]:
     st.markdown(
         f"""
@@ -240,7 +245,7 @@ with cols[4]:
                 <div class="card-desc">งานตอบคำถามระบบแนะนำหนังสือ: นักศึกษา ความสัมพันธ์ และคำสั่ง Cypher พร้อมเอกสาร PDF</div>
             </div>
             <div>
-                <a href="{pdf_html_link}" download="ตอบคำถามBook Recommend.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
+                <a href="{pdf_book_link}" download="ตอบคำถามBook Recommend.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
                 <a href="https://github.com/664245019-cyber/Assignment-019/blob/main/ตอบคำถามBook Recommend.pdf" target="_blank" class="github-btn">🐱 ดูงานบน GitHub</a>
             </div>
         </div>
@@ -251,7 +256,7 @@ with cols[4]:
 # Footer เล็กๆ ด้านล่าง
 st.markdown(
     """
-    <div style='text-align: center; color: #94a3b8; font-size: 2rem; margin-top: 40px; margin-bottom: 20px;'>
+    <div style='text-align: center; color: #94a3b8; font-size: 1.1rem; margin-top: 40px; margin-bottom: 20px;'>
         All Assignment Portal • 664245019 คณิศร จันทรสูตร
     </div>
     """,
