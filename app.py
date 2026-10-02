@@ -205,7 +205,7 @@ with cols[2]:
             </div>
             <div>
                 <a href="https://drink-graph-recommendation-019-pvrsrplg8hnmtfupwhp8ss.streamlit.app/" target="_blank" class="custom-btn">เข้าสู่เว็บไซต์ ➔</a>
-                <a href="{pdf_club_link}" download="Drink_Recommendation_Presentation_019.pdf" class="custom-btn">📄 ดาวน์โหลด PDF</a>
+                <a href="{pdf_club_link}" download="Drink_Recommendation_Presentation_019.pdf" class="custom-btn">📄 ดาวน์โหลด Presentation PDF</a>
                 <a href="https://github.com/664245019-cyber/Drink-Graph-Recommendation-019" target="_blank" class="github-btn">🐱 ดูโค้ดบน GitHub</a>
             </div>
         </div>
