@@ -251,7 +251,7 @@ with cols[4]:
 st.markdown(
     """
     <div style='text-align: center; color: #94a3b8; font-size: 2rem; margin-top: 40px; margin-bottom: 20px;'>
-        Drink Recommendation Portal • 664245019 คณิศร จันทรสูตร
+        All Assignment Portal • 664245019 คณิศร จันทรสูตร
     </div>
     """,
     unsafe_allow_html=True,
