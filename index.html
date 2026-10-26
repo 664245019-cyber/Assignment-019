@@ -168,10 +168,6 @@
 <main>
   <!-- ========== โปรไฟล์ ========== -->
   <aside class="sidebar">
-    <div class="avatar-wrap" id="avatarWrap">
-      <!-- วางรูปชื่อ profile.png ไว้โฟลเดอร์เดียวกับไฟล์นี้ ถ้าไม่มีจะแสดงตัวอักษรย่อแทน -->
-      <img class="avatar" id="avatar" src="profile.png" alt="รูปโปรไฟล์ คณิศร จันทรสูตร">
-    </div>
     <h1 class="name">คณิศร จันทรสูตร</h1>
     <div class="username">664245019-cyber</div>
     <p class="bio">เว็บรวบรวมผลงานที่ส่งอาจารย์</p>
@@ -321,14 +317,6 @@
     row.appendChild(icon);
     row.appendChild(box);
     list.appendChild(row);
-  });
-
-  // ถ้าไม่มีรูป profile.png ให้ใช้ตัวอักษรย่อแทน
-  document.getElementById("avatar").addEventListener("error", function () {
-    var fb = document.createElement("div");
-    fb.className = "avatar-fallback";
-    fb.textContent = "ค";
-    document.getElementById("avatarWrap").replaceChildren(fb);
   });
 </script>
 </body>
