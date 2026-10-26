@@ -134,6 +134,9 @@
   }
   .work-card:hover { border-color: #636e7b; }
   .work-card.wide { grid-column: 1 / -1; }
+  /* การ์ดที่อยู่ตัวเดียวในแถว: จัดไว้กลาง ขนาดเท่าการ์ดอื่น */
+  .work-card.center { grid-column: 1 / -1; justify-self: center; width: calc((100% - 16px) / 2); }
+  @media (max-width: 600px) { .work-card.center { width: 100%; } }
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
   .card-title { font-weight: 600; font-size: 1rem; color: var(--link); line-height: 1.5; }
   .tag {
@@ -146,7 +149,7 @@
   .langs { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); }
   .lang { display: inline-flex; align-items: center; gap: 6px; }
   .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
-  .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; margin-left: auto; }
 
   /* ---------- ท้ายหน้า ---------- */
   footer {
@@ -181,7 +184,7 @@
     <div class="works-head">
       <span>📚</span>
       <h2>ผลงานของฉัน</h2>
-      <span class="count">5</span>
+      <span class="count">6</span>
     </div>
 
     <div class="works">
@@ -189,7 +192,42 @@
       <!-- งานที่ 1 -->
       <article class="work-card">
         <div class="card-top">
-          <div class="card-title">📘 งานที่ 1 - แนะนำเครื่องดื่มด้วย Graph Analysis</div>
+          <div class="card-title">📘 งานที่ 1 - Lab Week 2 Transaction</div>
+          <span class="tag">Public</span>
+        </div>
+        <div class="card-desc">แล็บสัปดาห์ที่ 2 เรื่อง Transaction, Concurrency &amp; Recovery เปิดและรันได้บน Google Colab</div>
+        <div class="card-foot">
+          <div class="langs">
+            <span class="lang"><span class="dot" style="background:#3572A5"></span>Jupyter Notebook</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-green" target="_blank" rel="noopener" href="https://colab.research.google.com/drive/1Ok84ujM_8R_1UtGsGccXXFTgiZr70VgC">เปิดใน Colab</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- งานที่ 2 -->
+      <article class="work-card">
+        <div class="card-top">
+          <div class="card-title">📕 งานที่ 2 - ระบบชมรมด้วย Neo4j</div>
+          <span class="tag">PDF</span>
+        </div>
+        <div class="card-desc">งานระบบชมรม: นักศึกษา ชมรม ความสัมพันธ์ และคำสั่ง Cypher พร้อมเอกสาร PDF</div>
+        <div class="card-foot">
+          <div class="langs">
+            <span class="lang"><span class="dot" style="background:#e5534b"></span>PDF</span>
+            <span class="lang"><span class="dot" style="background:#2f81f7"></span>Neo4j</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-green" target="_blank" rel="noopener" href="664245019_club.pdf">เปิดไฟล์ PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- งานที่ 3 -->
+      <article class="work-card">
+        <div class="card-top">
+          <div class="card-title">📘 งานที่ 3 - แนะนำเครื่องดื่มด้วย Graph Analysis</div>
           <span class="tag">Public</span>
         </div>
         <div class="card-desc">วิเคราะห์ความสัมพันธ์ FRIEND_OF และประวัติการสั่งเครื่องดื่มเชิงลึกด้วย Graph Algorithms เปิดและรันได้บน Google Colab</div>
@@ -204,10 +242,10 @@
         </div>
       </article>
 
-      <!-- งานที่ 2 -->
+      <!-- งานที่ 4 -->
       <article class="work-card">
         <div class="card-top">
-          <div class="card-title">📘 งานที่ 2 - แนะนำเครื่องดื่มด้วย Neo4j</div>
+          <div class="card-title">📘 งานที่ 4 - แนะนำเครื่องดื่มด้วย Neo4j</div>
           <span class="tag">Public</span>
         </div>
         <div class="card-desc">ระบบแนะนำเครื่องดื่มที่มีประสิทธิภาพสูงด้วยโครงสร้างฐานข้อมูลแบบกราฟ Neo4j เปิดและรันได้บน Google Colab</div>
@@ -223,28 +261,10 @@
         </div>
       </article>
 
-      <!-- งานที่ 3 -->
-      <article class="work-card">
+      <!-- งานที่ 5 -->
+      <article class="work-card center">
         <div class="card-top">
-          <div class="card-title">📕 งานที่ 3 - ระบบชมรมด้วย Neo4j</div>
-          <span class="tag">PDF</span>
-        </div>
-        <div class="card-desc">งานระบบชมรม: นักศึกษา ชมรม ความสัมพันธ์ และคำสั่ง Cypher พร้อมเอกสาร PDF</div>
-        <div class="card-foot">
-          <div class="langs">
-            <span class="lang"><span class="dot" style="background:#e5534b"></span>PDF</span>
-            <span class="lang"><span class="dot" style="background:#2f81f7"></span>Neo4j</span>
-          </div>
-          <div class="actions">
-            <a class="btn btn-green" target="_blank" rel="noopener" href="664245019_club.pdf">เปิดไฟล์ PDF</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- งานที่ 4 -->
-      <article class="work-card">
-        <div class="card-top">
-          <div class="card-title">📕 งานที่ 4 - Book Recommend System</div>
+          <div class="card-title">📕 งานที่ 5 - Book Recommend System</div>
           <span class="tag">PDF</span>
         </div>
         <div class="card-desc">งานตอบคำถามระบบแนะนำหนังสือ: นักศึกษา ความสัมพันธ์ และคำสั่ง Cypher พร้อมเอกสาร PDF</div>
@@ -259,11 +279,11 @@
         </div>
       </article>
 
-      <!-- งานที่ 5 -->
+      <!-- งาน Final -->
       <article class="work-card wide">
         <div class="card-top">
-          <div class="card-title">🎯 งานที่ 5 - ระบบแนะนำเครื่องดื่ม</div>
-          <span class="tag">Web App</span>
+          <div class="card-title">🎯 งาน Final - ระบบแนะนำเครื่องดื่ม</div>
+          <span class="tag">Final</span>
         </div>
         <div class="card-desc">เว็บแอปแนะนำเครื่องดื่มด้วย Graph Database (Neo4j) ใช้งานผ่านหน้าเว็บอินเทอร์เฟซสำเร็จรูป สะดวกและรวดเร็ว พร้อมไฟล์ Presentation เป็น PDF</div>
         <div class="card-foot">
